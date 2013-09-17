@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 using JJ.Framework.Configuration;
 using JJ.Framework.Persistence;
 
-namespace JJ.Models.QuestionAndAnswer.Persistence.Tests
+namespace JJ.Models.QuestionAndAnswer.Persistence.Tests.Helpers
 {
     public static class PersistenceHelper
     {
-        public static IContext CreatePersistenceContext()
+        public static IContext CreatePersistenceContext(string contextType = null)
         {
             PersistenceConfiguration persistenceConfiguration = ConfigurationManager.GetSection<PersistenceConfiguration>();
-
+            
             return ContextFactory.CreateContext(
-                persistenceConfiguration.ContextType,
+                contextType ?? persistenceConfiguration.ContextType,
                 persistenceConfiguration.Location,
                 persistenceConfiguration.ModelAssemblies);
         }
