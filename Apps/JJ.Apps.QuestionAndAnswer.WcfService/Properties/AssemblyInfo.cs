@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("JJ.Apps.QuestionAndAnswer.Service")]
+[assembly: AssemblyTitle("JJ.Apps.QuestionAndAnswer.WcfService")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("JJ.Apps.QuestionAndAnswer.Service")]
+[assembly: AssemblyProduct("JJ.Apps.QuestionAndAnswer.WcfService")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
