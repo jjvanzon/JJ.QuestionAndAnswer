@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("JJ.Models.QuestionAndAnswer.Persistence.EntityFramework")]
+[assembly: AssemblyTitle("JJ.Apps.QuestionAndAnswer.WcfService.DemoClient")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("JJ.Models.QuestionAndAnswer.Persistence.EntityFramework")]
+[assembly: AssemblyProduct("JJ.Apps.QuestionAndAnswer.WcfService.DemoClient")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6dcca8ad-6100-4117-a590-c45eb476d56a")]
+[assembly: Guid("4d2f473f-1f78-4ffa-bc42-098f33537663")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -7,8 +7,8 @@
     <ProjectGuid>{FFE345E3-1F70-40E8-BB12-9CB377EF7EB5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JJ.Models.QuestionAndAnswer.Persistence.EntityFramework</RootNamespace>
-    <AssemblyName>JJ.Models.QuestionAndAnswer.Persistence.EntityFramework</AssemblyName>
+    <RootNamespace>JJ.Models.QuestionAndAnswer.Persistence.EntityFramework5</RootNamespace>
+    <AssemblyName>JJ.Models.QuestionAndAnswer.Persistence.EntityFramework5</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
