@@ -10,16 +10,21 @@ using JJ.Business.QuestionAndAnswer.Resources;
 
 namespace JJ.Business.QuestionAndAnswer.Validation
 {
-    public class QuestionMultipleChoiceValidator : FluentValidator<Question>
+    /// <summary> For full validation, also execute BasicQuestionValidator. </summary>
+    public class MultipleChoiceQuestionValidator : FluentValidator<Question>
     {
-        public QuestionMultipleChoiceValidator(Question question)
+        /// <summary> For full validation, also execute BasicQuestionValidator. </summary>
+        public MultipleChoiceQuestionValidator(Question question)
             : base(question)
         { }
 
         protected override void Execute()
         {
-            For(Object.GetQuestionTypeEnum(), PropertyDisplayNames.QuestionTypeEnum)
-                .IsValue(QuestionTypeEnum.MultipleChoice);
+            if (Object.QuestionType != null)
+            {
+                For(Object.GetQuestionTypeEnum(), PropertyDisplayNames.QuestionTypeEnum)
+                    .IsValue(QuestionTypeEnum.MultipleChoice);
+            }
 
             For(Object.Answers.Count, PropertyDisplayNames.AnswersCount)
                 .Above(1);

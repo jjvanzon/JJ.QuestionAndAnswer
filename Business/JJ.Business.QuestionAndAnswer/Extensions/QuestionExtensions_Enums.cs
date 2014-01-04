@@ -12,7 +12,7 @@ using System.Collections;
 
 namespace JJ.Business.QuestionAndAnswer.Extensions
 {
-    public static partial class QuestionExtensions
+    public static class QuestionExtensions_Enums
     {
         public static QuestionTypeEnum GetQuestionTypeEnum(this Question entity)
         {

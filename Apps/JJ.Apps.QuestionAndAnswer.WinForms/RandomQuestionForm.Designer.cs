@@ -1,6 +1,6 @@
 ﻿namespace JJ.Apps.QuestionAndAnswer.WinForms
 {
-    partial class QuesionDetailForm
+    partial class RandomQuestionForm
     {
         /// <summary>
         /// Required designer variable.

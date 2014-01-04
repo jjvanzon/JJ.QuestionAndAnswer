@@ -10,15 +10,15 @@ using System.Text;
 namespace JJ.Apps.QuestionAndAnswer.WcfService
 {
     [ServiceContract]
-    public interface IQuestionService
+    public interface IRandomQuestionService
     {
         [OperationContract]
-        QuestionDetailViewModel ShowQuestion();
+        RandomQuestionViewModel ShowQuestion();
 
         [OperationContract]
-        QuestionDetailViewModel ShowAnswer(QuestionDetailViewModel viewModel);
+        RandomQuestionViewModel ShowAnswer(RandomQuestionViewModel viewModel);
 
         [OperationContract]
-        QuestionDetailViewModel HideAnswer(QuestionDetailViewModel viewModel);
+        RandomQuestionViewModel HideAnswer(RandomQuestionViewModel viewModel);
     }
 }

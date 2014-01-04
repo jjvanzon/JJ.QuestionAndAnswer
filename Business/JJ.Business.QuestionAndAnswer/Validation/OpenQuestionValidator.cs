@@ -11,16 +11,21 @@ using JJ.Business.QuestionAndAnswer.Resources;
 
 namespace JJ.Business.QuestionAndAnswer.Validation
 {
-    public class QuestionOpenQuestionValidator : FluentValidator<Question>
+    /// <summary> For full validation, also execute BasicQuestionValidator. </summary>
+    public class OpenQuestionValidator : FluentValidator<Question>
     {
-        public QuestionOpenQuestionValidator(Question question)
+        /// <summary> For full validation, also execute BasicQuestionValidator. </summary>
+        public OpenQuestionValidator(Question question)
             : base(question)
         { }
 
         protected override void Execute()
         {
-            For(Object.GetQuestionTypeEnum(), PropertyDisplayNames.QuestionTypeEnum)
-                .IsValue(QuestionTypeEnum.OpenQuestion);
+            if (Object.QuestionType != null)
+            {
+                For(Object.GetQuestionTypeEnum(), PropertyDisplayNames.QuestionTypeEnum)
+                    .IsValue(QuestionTypeEnum.OpenQuestion);
+            }
 
             For(Object.Answers.Count, PropertyDisplayNames.AnswersCount)
                 .IsValue(1);

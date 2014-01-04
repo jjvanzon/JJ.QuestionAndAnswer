@@ -12,27 +12,27 @@ using JJ.Models.QuestionAndAnswer.Persistence.RepositoryInterfaces;
 
 namespace JJ.Apps.QuestionAndAnswer.WcfService
 {
-    public class QuesionService : IQuestionService
+    public class RandomQuestionService : IRandomQuestionService
     {
-        public QuestionDetailViewModel ShowQuestion()
+        public RandomQuestionViewModel ShowQuestion()
         {
-            QuestionPresenter presenter = CreatePresenter();
-            return presenter.ShowQuestion();
+            RandomQuestionPresenter presenter = CreatePresenter();
+            return presenter.Show();
         }
 
-        public QuestionDetailViewModel ShowAnswer(QuestionDetailViewModel viewModel)
+        public RandomQuestionViewModel ShowAnswer(RandomQuestionViewModel viewModel)
         {
-            QuestionPresenter presenter = CreatePresenter();
+            RandomQuestionPresenter presenter = CreatePresenter();
             return presenter.ShowAnswer(viewModel, null);
         }
 
-        public QuestionDetailViewModel HideAnswer(QuestionDetailViewModel viewModel)
+        public RandomQuestionViewModel HideAnswer(RandomQuestionViewModel viewModel)
         {
-            QuestionPresenter presenter = CreatePresenter();
+            RandomQuestionPresenter presenter = CreatePresenter();
             return presenter.HideAnswer(viewModel, null);
         }
 
-        private QuestionPresenter CreatePresenter()
+        private RandomQuestionPresenter CreatePresenter()
         {
             IContext context = ContextHelper.CreateContextFromConfiguration();
             ICategoryRepository categoryRepository = RepositoryFactory.CreateCategoryRepository(context);
@@ -40,7 +40,7 @@ namespace JJ.Apps.QuestionAndAnswer.WcfService
             IQuestionFlagRepository questionFlagRepository = RepositoryFactory.CreateQuestionFlagRepository(context);
             IFlagStatusRepository flagStatusRepository = RepositoryFactory.CreateFlagStatusRepository(context);
             IUserRepository userRepository = RepositoryFactory.CreateUserRepository(context);
-            return new QuestionPresenter(questionRepository, categoryRepository, questionFlagRepository, flagStatusRepository, userRepository);
+            return new RandomQuestionPresenter(questionRepository, categoryRepository, questionFlagRepository, flagStatusRepository, userRepository);
         }
     }
 }

@@ -1,7 +1,6 @@
-﻿<%@ Page 
-    Title="" Language="C#" 
-    MasterPageFile="~/Views/Shared/Site.Master" 
-    Inherits="System.Web.Mvc.ViewPage<JJ.Apps.QuestionAndAnswer.ViewModels.QuestionDetailViewModel>" %>
+﻿<%@ Page Title="" Language="C#" 
+         MasterPageFile="~/Views/Shared/Site.Master" 
+         Inherits="System.Web.Mvc.ViewPage<JJ.Apps.QuestionAndAnswer.ViewModels.RandomQuestionViewModel>" %>
 <%@ Import Namespace="JJ.Framework.Presentation.AspNetMvc4" %>
 <%@ Import Namespace="JJ.Apps.QuestionAndAnswer.Resources" %>
 <%@ Import Namespace="JJ.Apps.QuestionAndAnswer.ViewModels" %>
@@ -119,7 +118,7 @@
     <%-- Extra HiddenFor's for information that has to be sent over the line too. --%>
 
     <%: Html.HiddenFor(x => x.Question.ID) %>
-    <%: Html.HiddenFor(() => Model.AnswerIsVisible, Model.AnswerIsVisible) %>
+    <%: Html.HiddenFor(() => Model.AnswerIsVisible) %>
 
     <% for (int i = 0; i < Model.SelectedCategories.Count; i++) { %>
 
@@ -133,7 +132,7 @@
 
 <div id="nextQuestion">
 
-    <%: Html.ActionLinkWithCollection(Titles.NextQuestion, ActionNames.Question, ControllerNames.Questions, ActionParameterNames.c, Model.SelectedCategories.Select(x => x.ID)) %>
+    <%: Html.ActionLinkWithCollection(Titles.NextQuestion, ActionNames.Random, ControllerNames.Questions, ActionParameterNames.c, Model.SelectedCategories.Select(x => x.ID)) %>
 
 </div>
 

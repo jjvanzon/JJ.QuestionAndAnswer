@@ -18,7 +18,7 @@ namespace JJ.Apps.QuestionAndAnswer.Presenters
     /// A presenter has action methods that communicate by means of view models and ID's.
     /// A presenter can retrieve data from a context or repositories, but it will never communicate the entities themselves to the outside.
     /// </summary>
-    public class QuestionPresenter
+    public class RandomQuestionPresenter
     {
         private IQuestionRepository _questionRepository;
         private ICategoryRepository _categoryRepository;
@@ -28,7 +28,7 @@ namespace JJ.Apps.QuestionAndAnswer.Presenters
 
         private CategoryManager _categoryManager;
 
-        public QuestionPresenter(
+        public RandomQuestionPresenter(
             IQuestionRepository questionRepository,
             ICategoryRepository categoryRepository,
             IQuestionFlagRepository questionFlagRepository,
@@ -50,7 +50,10 @@ namespace JJ.Apps.QuestionAndAnswer.Presenters
             _categoryManager = new CategoryManager(_categoryRepository);
         }
 
-        public QuestionDetailViewModel ShowQuestion(params int[] categoryIDs)
+        /// <summary>
+        /// Can return RandomQuestionViewModel or QuestionNotFoundViewModel.
+        /// </summary>
+        public object Show(params int[] categoryIDs)
         {
             categoryIDs = categoryIDs ?? new int[] { };
 
@@ -73,11 +76,11 @@ namespace JJ.Apps.QuestionAndAnswer.Presenters
             // Not Found
             if (question == null)
             {
-                return new QuestionDetailViewModel { NotFound = true };
+                return new QuestionNotFoundViewModel();
             }
 
             // Create ViewModel
-            QuestionDetailViewModel viewModel = question.ToDetailViewModel();
+            RandomQuestionViewModel viewModel = question.ToRandomQuestionViewModel();
             viewModel.AnswerIsVisible = false;
             viewModel.Question.Answer = null;
             viewModel.Question.Links.Clear(); // Links reveal answer.
@@ -86,7 +89,10 @@ namespace JJ.Apps.QuestionAndAnswer.Presenters
             return viewModel;
         }
 
-        public QuestionDetailViewModel ShowAnswer(QuestionDetailViewModel viewModel, string userName)
+        /// <summary>
+        /// Can return RandomQuestionViewModel or QuestionNotFoundViewModel.
+        /// </summary>
+        public object ShowAnswer(RandomQuestionViewModel viewModel, string userName)
         {
             // Check conditions
             if (viewModel == null) { throw new ArgumentNullException("viewModel"); }
@@ -96,20 +102,20 @@ namespace JJ.Apps.QuestionAndAnswer.Presenters
             Question question = _questionRepository.TryGet(viewModel.Question.ID);
             if (question == null)
             {
-                return NotFound(viewModel.Question.ID);
+                return new QuestionNotFoundViewModel { ID = viewModel.Question.ID };
             }
             User user = _userRepository.TryGetByUserName(userName);
             QuestionFlag questionFlag = TryGetQuestionFlag(question, user);
 
             // Create new view model
-            QuestionDetailViewModel viewModel2 = question.ToDetailViewModel(questionFlag);
+            RandomQuestionViewModel viewModel2 = question.ToRandomQuestionViewModel(questionFlag);
 
             // Set non-persisted properties
             viewModel2.UserAnswer = viewModel.UserAnswer;
             viewModel2.AnswerIsVisible = true;
             if (user != null)
             {
-                viewModel2.Question.Flag.CanFlag = true;
+                viewModel2.CurrentUserQuestionFlag.CanFlag = true;
             }
             if (viewModel.SelectedCategories != null)
             {
@@ -119,7 +125,10 @@ namespace JJ.Apps.QuestionAndAnswer.Presenters
             return viewModel2;
         }
 
-        public QuestionDetailViewModel HideAnswer(QuestionDetailViewModel viewModel, string userName)
+        /// <summary>
+        /// Can return RandomQuestionViewModel or QuestionNotFoundViewModel.
+        /// </summary>
+        public object HideAnswer(RandomQuestionViewModel viewModel, string userName)
         {
             // Check conditions
             if (viewModel == null) { throw new ArgumentNullException("viewModel"); }
@@ -129,18 +138,18 @@ namespace JJ.Apps.QuestionAndAnswer.Presenters
             Question question = _questionRepository.TryGet(viewModel.Question.ID);
             if (question == null)
             {
-                return NotFound(viewModel.Question.ID);
+                return new QuestionNotFoundViewModel { ID = viewModel.Question.ID };
             }
             User user = _userRepository.TryGetByUserName(userName);
             QuestionFlag questionFlag = TryGetQuestionFlag(question, user);
 
             // Create new view model
-            QuestionDetailViewModel viewModel2 = question.ToDetailViewModel(questionFlag);
+            RandomQuestionViewModel viewModel2 = question.ToRandomQuestionViewModel(questionFlag);
 
             // Set non-persisted properties
             viewModel2.UserAnswer = viewModel.UserAnswer;
             viewModel2.AnswerIsVisible = false;
-            viewModel2.Question.Flag.CanFlag = false;
+            viewModel2.CurrentUserQuestionFlag.CanFlag = false;
             if (viewModel.SelectedCategories != null)
             {
                 viewModel2.SelectedCategories = viewModel.SelectedCategories;
@@ -152,45 +161,53 @@ namespace JJ.Apps.QuestionAndAnswer.Presenters
             return viewModel2;
         }
 
-        /// <summary> Can return QuestionFlagViewModel, NotAuthenticatedViewModel. </summary>
-        /// <param name="loginViewModel">If loginViewModel.IsLoggedIn is true, the user is considered authenticated.</param>
-        public object Flag(QuestionDetailViewModel viewModel, string userName)
+        /// <summary> Can return RandomQuestionViewModel, QuestionNotFoundViewModel or NotAuthenticatedViewModel. </summary>
+        public object Flag(RandomQuestionViewModel viewModel, string userName)
         {
             // Check conditions
             if (viewModel == null) { throw new ArgumentNullException("viewModel"); }
             if (viewModel.Question == null) { throw new ArgumentNullException("viewModel.Question"); }
-            if (viewModel.Question.Flag == null) { throw new ArgumentNullException("viewModel.Question.Flag"); }
+            if (viewModel.CurrentUserQuestionFlag == null) { throw new ArgumentNullException("viewModel.CurrentUserQuestionFlag"); }
 
             // Get entities
             User user = _userRepository.GetByUserName(userName);
-            Question question = _questionRepository.Get(viewModel.Question.ID);
+            Question question = _questionRepository.TryGet(viewModel.Question.ID);
+            if (question == null)
+            {
+                return new QuestionNotFoundViewModel { ID = viewModel.Question.ID };
+            }
 
             // Call business logic
             var questionFlagger = new QuestionFlagger(_questionFlagRepository, _flagStatusRepository, user);
-            QuestionFlag questionFlag = questionFlagger.FlagQuestion(question, viewModel.Question.Flag.Comment);
+            QuestionFlag questionFlag = questionFlagger.FlagQuestion(question, viewModel.CurrentUserQuestionFlag.Comment);
             _questionFlagRepository.Commit();
 
             // Create new view model
-            QuestionDetailViewModel viewModel2 = question.ToDetailViewModel(questionFlag);
+            RandomQuestionViewModel viewModel2 = question.ToRandomQuestionViewModel(questionFlag);
             
             // Set non-persisted properties
             viewModel2.UserAnswer = viewModel.UserAnswer;
             viewModel2.AnswerIsVisible = viewModel.AnswerIsVisible;
-            viewModel2.Question.Flag.CanFlag = viewModel.AnswerIsVisible;
+            viewModel2.CurrentUserQuestionFlag.CanFlag = viewModel.AnswerIsVisible;
 
             return viewModel2;
         }
 
-        /// <summary> Can return QuestionFlagViewModel, NotAuthenticatedViewModel. </summary>
-        public object Unflag(QuestionDetailViewModel viewModel, string userName)
+        /// <summary> Can return RandomQuestionViewModel, QuestionNotFoundViewModel or NotAuthenticatedViewModel. </summary>
+        public object Unflag(RandomQuestionViewModel viewModel, string userName)
         {
             // Check conditions
             if (viewModel == null) { throw new ArgumentNullException("viewModel"); }
             if (viewModel.Question == null) { throw new ArgumentNullException("viewModel.Question"); }
+            if (viewModel.CurrentUserQuestionFlag == null) { throw new ArgumentNullException("viewModel.CurrentUserQuestionFlag"); }
 
             // Get entities
             User user = _userRepository.GetByUserName(userName);
-            Question question = _questionRepository.Get(viewModel.Question.ID);
+            Question question = _questionRepository.TryGet(viewModel.Question.ID);
+            if (question == null)
+            {
+                return new QuestionNotFoundViewModel { ID = viewModel.Question.ID };
+            }
 
             // Call business logic
             var questionFlagger = new QuestionFlagger(_questionFlagRepository, _flagStatusRepository, user);
@@ -198,12 +215,12 @@ namespace JJ.Apps.QuestionAndAnswer.Presenters
             _questionFlagRepository.Commit();
 
             // Create new view model
-            QuestionDetailViewModel viewModel2 = question.ToDetailViewModel();
+            RandomQuestionViewModel viewModel2 = question.ToRandomQuestionViewModel();
 
             // Set non-persisted properties
             viewModel2.UserAnswer = viewModel.UserAnswer;
             viewModel2.AnswerIsVisible = viewModel.AnswerIsVisible;
-            viewModel2.Question.Flag.CanFlag = viewModel.AnswerIsVisible;
+            viewModel2.CurrentUserQuestionFlag.CanFlag = viewModel.AnswerIsVisible;
 
             return viewModel2;
         }
@@ -220,15 +237,6 @@ namespace JJ.Apps.QuestionAndAnswer.Presenters
             QuestionFlag questionFlag = questionFlagger.TryGetFlag(question);
 
             return questionFlag;
-        }
-
-        private QuestionDetailViewModel NotFound(int id)
-        {
-            var viewModel = new QuestionDetailViewModel();
-            viewModel.Question = new QuestionViewModel();
-            viewModel.Question.ID = id;
-            viewModel.NotFound = true;
-            return viewModel;
         }
 
         private List<Category> GetCategories(int[] ids)

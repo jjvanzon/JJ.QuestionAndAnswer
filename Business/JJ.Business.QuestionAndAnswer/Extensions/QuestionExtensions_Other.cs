@@ -11,7 +11,7 @@ using System.Collections;
 
 namespace JJ.Business.QuestionAndAnswer.Extensions
 {
-    public static partial class QuestionExtensions
+    public static class QuestionExtensions_Other
     {
         public static void AutoCreateRelatedEntities(this Question question, IAnswerRepository answerRepository)
         {

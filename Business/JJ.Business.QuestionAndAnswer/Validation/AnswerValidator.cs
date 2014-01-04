@@ -9,16 +9,14 @@ using System.Threading.Tasks;
 
 namespace JJ.Business.QuestionAndAnswer.Validation
 {
-    public class QuestionDefaultValidator : FluentValidator<Question>
+    public class AnswerValidator : FluentValidator<Answer>
     {
-        public QuestionDefaultValidator(Question question)
-            : base (question)
+        public AnswerValidator(Answer obj)
+            : base(obj)
         { }
 
         protected override void Execute()
         {
-            Execute(new QuestionQuestionTypeValidator(Object));
-
             For(Object.Text, PropertyDisplayNames.Text)
                 .NotNullOrWhiteSpace();
         }
