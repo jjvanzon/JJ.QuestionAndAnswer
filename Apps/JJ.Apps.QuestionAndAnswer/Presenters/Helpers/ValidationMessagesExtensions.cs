@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JJ.Apps.QuestionAndAnswer.Presenters.Helpers
 {
-    internal static class IEnumerableOfValidationMessageExtensions
+    internal static class ValidationMessagesExtensions
     {
         public static List<JJ.Models.Canonical.ValidationMessage> ToCanonical(this IEnumerable<JJ.Framework.Validation.ValidationMessage> sourceList)
         {
