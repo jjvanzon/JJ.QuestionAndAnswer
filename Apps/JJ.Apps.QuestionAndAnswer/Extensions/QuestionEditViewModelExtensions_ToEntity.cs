@@ -10,8 +10,9 @@ using JJ.Models.QuestionAndAnswer.Persistence;
 using JJ.Models.QuestionAndAnswer.Persistence.RepositoryInterfaces;
 using JJ.Business.QuestionAndAnswer.Extensions;
 using JJ.Business.QuestionAndAnswer.Enums;
+using JJ.Apps.QuestionAndAnswer.ViewModels;
 
-namespace JJ.Apps.QuestionAndAnswer.ViewModels.Helpers
+namespace JJ.Apps.QuestionAndAnswer.Extensions
 {
     internal static class QuestionEditViewModelExtensions_ToEntity
     {

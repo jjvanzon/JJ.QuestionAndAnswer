@@ -11,8 +11,9 @@ using JJ.Business.QuestionAndAnswer.Enums;
 using JJ.Models.Canonical;
 using JJ.Business.QuestionAndAnswer;
 using JJ.Framework.Common;
+using JJ.Apps.QuestionAndAnswer.Helpers;
 
-namespace JJ.Apps.QuestionAndAnswer.ViewModels.Helpers
+namespace JJ.Apps.QuestionAndAnswer.Extensions
 {
     internal static class QuestionExtensions_ToViewModel
     {

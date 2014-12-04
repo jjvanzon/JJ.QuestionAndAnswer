@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JJ.Apps.QuestionAndAnswer.Presenters.Helpers
+namespace JJ.Apps.QuestionAndAnswer.Helpers
 {
     public class Repositories
     {

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using JJ.Apps.QuestionAndAnswer.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JJ.Apps.QuestionAndAnswer.ViewModels.Helpers
+namespace JJ.Apps.QuestionAndAnswer.Extensions
 {
     internal static class ViewModelExtensions_NullCoallesce
     {

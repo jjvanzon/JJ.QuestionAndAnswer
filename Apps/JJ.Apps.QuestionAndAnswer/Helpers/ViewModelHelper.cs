@@ -1,4 +1,6 @@
-﻿using JJ.Business.QuestionAndAnswer;
+﻿using JJ.Apps.QuestionAndAnswer.ViewModels;
+using JJ.Apps.QuestionAndAnswer.Extensions;
+using JJ.Business.QuestionAndAnswer;
 using JJ.Models.Canonical;
 using JJ.Models.QuestionAndAnswer;
 using JJ.Models.QuestionAndAnswer.Persistence.RepositoryInterfaces;
@@ -8,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JJ.Apps.QuestionAndAnswer.ViewModels.Helpers
+namespace JJ.Apps.QuestionAndAnswer.Helpers
 {
     internal static class ViewModelHelper
     {

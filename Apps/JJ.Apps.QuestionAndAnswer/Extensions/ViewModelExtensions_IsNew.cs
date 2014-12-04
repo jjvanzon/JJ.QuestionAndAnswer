@@ -1,4 +1,5 @@
-﻿using JJ.Models.QuestionAndAnswer;
+﻿using JJ.Apps.QuestionAndAnswer.ViewModels;
+using JJ.Models.QuestionAndAnswer;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JJ.Apps.QuestionAndAnswer.ViewModels.Helpers
+namespace JJ.Apps.QuestionAndAnswer.Extensions
 {
     internal static class ViewModelExtensions_IsNew
     {
