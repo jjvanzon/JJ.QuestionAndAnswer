@@ -7,8 +7,8 @@
     <ProjectGuid>{B1408E4F-4A1C-4CD6-B818-0FF37A40E2FF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JJ.Models.QuestionAndAnswer.Persistence</RootNamespace>
-    <AssemblyName>JJ.Models.QuestionAndAnswer.Persistence</AssemblyName>
+    <RootNamespace>JJ.Models.QuestionAndAnswer.Repositories</RootNamespace>
+    <AssemblyName>JJ.Models.QuestionAndAnswer.Repositories</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,32 +32,29 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Repositories\CategoryRepository.cs" />
-    <Compile Include="Repositories\AnswerRepository.cs" />
-    <Compile Include="Repositories\FlagStatusRepository.cs" />
-    <Compile Include="Repositories\QuestionFlagRepository.cs" />
-    <Compile Include="Repositories\UserRepository.cs" />
-    <Compile Include="Repositories\QuestionCategoryRepository.cs" />
-    <Compile Include="Repositories\QuestionLinkRepository.cs" />
-    <Compile Include="Repositories\QuestionTypeRepository.cs" />
-    <Compile Include="Repositories\SourceRepository.cs" />
-    <Compile Include="RepositoryInterfaces\IFlagStatusRepository.cs" />
-    <Compile Include="RepositoryInterfaces\IQuestionCategoryRepository.cs" />
-    <Compile Include="RepositoryInterfaces\IQuestionFlagRepository.cs" />
-    <Compile Include="RepositoryInterfaces\IQuestionLinkRepository.cs" />
-    <Compile Include="RepositoryInterfaces\IQuestionTypeRepository.cs" />
-    <Compile Include="RepositoryInterfaces\ISourceRepository.cs" />
-    <Compile Include="RepositoryInterfaces\ICategoryRepository.cs" />
-    <Compile Include="RepositoryInterfaces\IAnswerRepository.cs" />
-    <Compile Include="RepositoryInterfaces\IQuestionRepository.cs" />
+    <Compile Include="CategoryRepository.cs" />
+    <Compile Include="AnswerRepository.cs" />
+    <Compile Include="FlagStatusRepository.cs" />
+    <Compile Include="QuestionFlagRepository.cs" />
+    <Compile Include="UserRepository.cs" />
+    <Compile Include="QuestionCategoryRepository.cs" />
+    <Compile Include="QuestionLinkRepository.cs" />
+    <Compile Include="QuestionTypeRepository.cs" />
+    <Compile Include="SourceRepository.cs" />
+    <Compile Include="Interfaces\IFlagStatusRepository.cs" />
+    <Compile Include="Interfaces\IQuestionCategoryRepository.cs" />
+    <Compile Include="Interfaces\IQuestionFlagRepository.cs" />
+    <Compile Include="Interfaces\IQuestionLinkRepository.cs" />
+    <Compile Include="Interfaces\IQuestionTypeRepository.cs" />
+    <Compile Include="Interfaces\ISourceRepository.cs" />
+    <Compile Include="Interfaces\ICategoryRepository.cs" />
+    <Compile Include="Interfaces\IAnswerRepository.cs" />
+    <Compile Include="Interfaces\IQuestionRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RepositoryInterfaces\IUserRepository.cs" />
-    <Compile Include="Sql\SqlEnum.cs" />
-    <Compile Include="Sql\SqlExecutor.cs" />
-    <Compile Include="Repositories\QuestionRepository.cs.cs" />
+    <Compile Include="Interfaces\IUserRepository.cs" />
+    <Compile Include="QuestionRepository.cs.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Framework\JJ.Framework.Common\JJ.Framework.Common.csproj">
@@ -73,9 +70,7 @@
       <Name>JJ.Models.QuestionAndAnswer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Sql\TryGetRandomQuestionID.sql" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JJ.Models.QuestionAndAnswer.Persistence.RepositoryInterfaces
+namespace JJ.Models.QuestionAndAnswer.Repositories.Interfaces
 {
     public interface IQuestionRepository : IRepository<Question, int>
     {

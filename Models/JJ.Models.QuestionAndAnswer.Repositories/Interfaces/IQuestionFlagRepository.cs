@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using JJ.Framework.Persistence;
 
-namespace JJ.Models.QuestionAndAnswer.Persistence.RepositoryInterfaces
+namespace JJ.Models.QuestionAndAnswer.Repositories.Interfaces
 {
     public interface IQuestionFlagRepository : IRepository<QuestionFlag, int>
     {

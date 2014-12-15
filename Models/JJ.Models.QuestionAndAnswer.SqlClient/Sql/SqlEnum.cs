@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JJ.Models.QuestionAndAnswer.Persistence.Sql
+namespace JJ.Models.QuestionAndAnswer.SqlClient.Sql
 {
     internal enum SqlEnum
     {

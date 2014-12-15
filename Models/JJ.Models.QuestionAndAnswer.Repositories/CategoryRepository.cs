@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using JJ.Framework.Persistence;
-using JJ.Models.QuestionAndAnswer.Persistence.RepositoryInterfaces;
+using JJ.Models.QuestionAndAnswer.Repositories.Interfaces;
 
-namespace JJ.Models.QuestionAndAnswer.Persistence.Repositories
+namespace JJ.Models.QuestionAndAnswer.Repositories
 {
     public class CategoryRepository : RepositoryBase<Category, int>, ICategoryRepository
     {

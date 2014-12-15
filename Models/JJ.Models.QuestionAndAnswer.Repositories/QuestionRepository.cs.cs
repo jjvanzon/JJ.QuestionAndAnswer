@@ -1,38 +1,23 @@
 ﻿using JJ.Framework.Persistence;
-using JJ.Models.QuestionAndAnswer.Persistence.Sql;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using JJ.Models.QuestionAndAnswer.Persistence.RepositoryInterfaces;
+using JJ.Models.QuestionAndAnswer.Repositories.Interfaces;
 using JJ.Framework.Common;
 
-namespace JJ.Models.QuestionAndAnswer.Persistence.Repositories
+namespace JJ.Models.QuestionAndAnswer.Repositories
 {
     public class QuestionRepository : RepositoryBase<Question, int>, IQuestionRepository
     {
-        private SqlExecutor _sqlExecutor;
-
         public QuestionRepository(IContext context)
             : base(context)
-        {
-            // TODO: This only works for SQL Server.
-            string sqlConnectionString = context.Location;
-            _sqlExecutor = new SqlExecutor(sqlConnectionString);
-        }
+        { }
 
-        public Question TryGetRandomQuestion()
+        public virtual Question TryGetRandomQuestion()
         {
-            int? randomID = _sqlExecutor.TryGetRandomQuestionID();
-            if (randomID.HasValue)
-            {
-                return Get(randomID.Value);
-            }
-            else
-            {
-                return null;
-            }
+            throw new NotImplementedException();
         }
 
         public IEnumerable<Question> GetBySourceID(int sourceID)
