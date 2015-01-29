@@ -1,7 +1,7 @@
 ﻿// Depends on JJ.Framework.Assert
 // Depends on JJ.Framework.Check
 
-// TODO: Add functionality to work with the path and domain attributes of the cookie.
+// TODO: Add functionality to work with the path and domain attributes of a cookie.
 
 var JJ = JJ || {};
 JJ.Framework = JJ.Framework || {};
@@ -31,12 +31,14 @@ JJ.Framework.Cookie.set = function (name, value, expirationDate, expirationDays)
     JJ.Framework.Assert.notNullOrEmpty(name, "name");
     JJ.Framework.Assert.isDefined(value, "value");
 
-    var cookie = name + "=" + escape(value) + ";"; // TODO: Check if the escape function will work with non-string values.
+    var cookie = escape(name) + "=" + escape(value) + ";"; // TODO: Check if the escape function will work with non-string values.
 
     if (JJ.Framework.Check.isDefined(expirationDate) &&
         JJ.Framework.Check.isDefined(expirationDays)){
         throw "Define either expirationDate or expirationDays, but not both.";
     }
+
+    // TODO: The use of the expirationDate and expirationDays parameters has never been tested.
 
     if (JJ.Framework.Check.isDefined(expirationDate)) {
         JJ.Framework.Assert.isDate(expirationDate, "expirationDate");
