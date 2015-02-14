@@ -2,7 +2,7 @@
 
 <script>
     $(document).ready(function () {
-        $("#selectedLanguageDropDownListBox").change(function () {
+        $("#langDdl").change(function () {
             var cultureName = $(this).val();
 
             //var url = window.location.pathname + '?<%:ActionParameterNames.lang%>=' + cultureName;
@@ -29,5 +29,5 @@
             Value = x.CultureName, 
             Text = x.Name
         }),
-        htmlAttributes: new { id = "selectedLanguageDropDownListBox" })
+        htmlAttributes: new { id = "langDdl" })
 %>
