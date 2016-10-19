@@ -66,31 +66,31 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Data.EntityFramework5\JJ.Framework.Data.EntityFramework5.csproj">
+    <ProjectReference Include="..\..\Framework\Data.EntityFramework5\JJ.Framework.Data.EntityFramework5.csproj">
       <Project>{9676e4c3-1a1f-45b8-8ffd-c398f14002e7}</Project>
       <Name>JJ.Framework.Data.EntityFramework5</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Data.SqlClient\JJ.Framework.Data.SqlClient.csproj">
+    <ProjectReference Include="..\..\Framework\Data.SqlClient\JJ.Framework.Data.SqlClient.csproj">
       <Project>{ceb85f8e-d429-4510-95a5-47cc3069d412}</Project>
       <Name>JJ.Framework.Data.SqlClient</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Data\JJ.Framework.Data.csproj">
+    <ProjectReference Include="..\..\Framework\Data\JJ.Framework.Data.csproj">
       <Project>{7adeddce-6903-4a58-94f5-d0b39b21330f}</Project>
       <Name>JJ.Framework.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Reflection\JJ.Framework.Reflection.csproj">
+    <ProjectReference Include="..\..\Framework\Reflection\JJ.Framework.Reflection.csproj">
       <Project>{1a8e047c-7893-4918-b415-ce3928e815d8}</Project>
       <Name>JJ.Framework.Reflection</Name>
     </ProjectReference>
-    <ProjectReference Include="..\JJ.Data.QuestionAndAnswer.DefaultRepositories\JJ.Data.QuestionAndAnswer.DefaultRepositories.csproj">
+    <ProjectReference Include="..\QuestionAndAnswer.DefaultRepositories\JJ.Data.QuestionAndAnswer.DefaultRepositories.csproj">
       <Project>{b1408e4f-4a1c-4cd6-b818-0ff37a40e2ff}</Project>
       <Name>JJ.Data.QuestionAndAnswer.DefaultRepositories</Name>
     </ProjectReference>
-    <ProjectReference Include="..\JJ.Data.QuestionAndAnswer.Sql\JJ.Data.QuestionAndAnswer.Sql.csproj">
+    <ProjectReference Include="..\QuestionAndAnswer.Sql\JJ.Data.QuestionAndAnswer.Sql.csproj">
       <Project>{9cf32856-6431-4366-8dea-a6ca2f27b5c6}</Project>
       <Name>JJ.Data.QuestionAndAnswer.Sql</Name>
     </ProjectReference>
-    <ProjectReference Include="..\JJ.Data.QuestionAndAnswer\JJ.Data.QuestionAndAnswer.csproj">
+    <ProjectReference Include="..\QuestionAndAnswer\JJ.Data.QuestionAndAnswer.csproj">
       <Project>{64e812dc-4b3e-4a20-a6ca-7ea319383c49}</Project>
       <Name>JJ.Data.QuestionAndAnswer</Name>
     </ProjectReference>

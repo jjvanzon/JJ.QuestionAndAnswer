@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9CF32856-6431-4366-8DEA-A6CA2F27B5C6}</ProjectGuid>
+    <ProjectGuid>{B1408E4F-4A1C-4CD6-B818-0FF37A40E2FF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JJ.Data.QuestionAndAnswer.Sql</RootNamespace>
-    <AssemblyName>JJ.Data.QuestionAndAnswer.Sql</AssemblyName>
+    <RootNamespace>JJ.Data.QuestionAndAnswer.DefaultRepositories</RootNamespace>
+    <AssemblyName>JJ.Data.QuestionAndAnswer.DefaultRepositories</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -38,31 +38,47 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryRepository.cs" />
+    <Compile Include="AnswerRepository.cs" />
+    <Compile Include="FlagStatusRepository.cs" />
+    <Compile Include="QuestionFlagRepository.cs" />
+    <Compile Include="UserRepository.cs" />
+    <Compile Include="QuestionCategoryRepository.cs" />
+    <Compile Include="QuestionLinkRepository.cs" />
+    <Compile Include="QuestionTypeRepository.cs" />
+    <Compile Include="SourceRepository.cs" />
+    <Compile Include="Interfaces\IFlagStatusRepository.cs" />
+    <Compile Include="Interfaces\IQuestionCategoryRepository.cs" />
+    <Compile Include="Interfaces\IQuestionFlagRepository.cs" />
+    <Compile Include="Interfaces\IQuestionLinkRepository.cs" />
+    <Compile Include="Interfaces\IQuestionTypeRepository.cs" />
+    <Compile Include="Interfaces\ISourceRepository.cs" />
+    <Compile Include="Interfaces\ICategoryRepository.cs" />
+    <Compile Include="Interfaces\IAnswerRepository.cs" />
+    <Compile Include="Interfaces\IQuestionRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Question_GetPageOfIDs.sql" />
-    <Compile Include="QuestionAndAnswerSqlExecutor.cs" />
-    <Compile Include="SqlEnum.cs" />
+    <Compile Include="Interfaces\IUserRepository.cs" />
+    <Compile Include="QuestionRepository.cs.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Question_TryGetRandomID.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Common\JJ.Framework.Common.csproj">
+    <ProjectReference Include="..\..\Framework\Common\JJ.Framework.Common.csproj">
       <Project>{44fd9133-5fe7-4824-bd35-27273706d127}</Project>
       <Name>JJ.Framework.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Data.SqlClient\JJ.Framework.Data.SqlClient.csproj">
-      <Project>{ceb85f8e-d429-4510-95a5-47cc3069d412}</Project>
-      <Name>JJ.Framework.Data.SqlClient</Name>
+    <ProjectReference Include="..\..\Framework\Data\JJ.Framework.Data.csproj">
+      <Project>{7adeddce-6903-4a58-94f5-d0b39b21330f}</Project>
+      <Name>JJ.Framework.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Reflection\JJ.Framework.Reflection.csproj">
+    <ProjectReference Include="..\..\Framework\Reflection\JJ.Framework.Reflection.csproj">
       <Project>{1a8e047c-7893-4918-b415-ce3928e815d8}</Project>
       <Name>JJ.Framework.Reflection</Name>
     </ProjectReference>
+    <ProjectReference Include="..\QuestionAndAnswer\JJ.Data.QuestionAndAnswer.csproj">
+      <Project>{64e812dc-4b3e-4a20-a6ca-7ea319383c49}</Project>
+      <Name>JJ.Data.QuestionAndAnswer</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Question_CountAll.sql" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

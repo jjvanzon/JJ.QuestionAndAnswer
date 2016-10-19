@@ -300,7 +300,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Business\JJ.Business.QuestionAndAnswer\JJ.Business.QuestionAndAnswer.csproj">
+    <ProjectReference Include="..\..\Business\QuestionAndAnswer\JJ.Business.QuestionAndAnswer.csproj">
       <Project>{b473be3e-3dca-4418-bfa0-9ebf0e024350}</Project>
       <Name>JJ.Business.QuestionAndAnswer</Name>
     </ProjectReference>
@@ -312,79 +312,79 @@
       <Project>{5909bfe7-93cf-4e5f-be22-6293368af01d}</Project>
       <Name>NHibernate</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Common\JJ.Framework.Common.csproj">
+    <ProjectReference Include="..\..\Framework\Common\JJ.Framework.Common.csproj">
       <Project>{44fd9133-5fe7-4824-bd35-27273706d127}</Project>
       <Name>JJ.Framework.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Configuration\JJ.Framework.Configuration.csproj">
+    <ProjectReference Include="..\..\Framework\Configuration\JJ.Framework.Configuration.csproj">
       <Project>{805a8237-05ed-40ae-8d1a-9288373ea5e0}</Project>
       <Name>JJ.Framework.Configuration</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Data.EntityFramework5\JJ.Framework.Data.EntityFramework5.csproj">
+    <ProjectReference Include="..\..\Framework\Data.EntityFramework5\JJ.Framework.Data.EntityFramework5.csproj">
       <Project>{9676e4c3-1a1f-45b8-8ffd-c398f14002e7}</Project>
       <Name>JJ.Framework.Data.EntityFramework5</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Data.NHibernate\JJ.Framework.Data.NHibernate.csproj">
+    <ProjectReference Include="..\..\Framework\Data.NHibernate\JJ.Framework.Data.NHibernate.csproj">
       <Project>{db783ed9-fde6-458f-a094-457b7f4283a0}</Project>
       <Name>JJ.Framework.Data.NHibernate</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Data.SqlClient\JJ.Framework.Data.SqlClient.csproj">
+    <ProjectReference Include="..\..\Framework\Data.SqlClient\JJ.Framework.Data.SqlClient.csproj">
       <Project>{ceb85f8e-d429-4510-95a5-47cc3069d412}</Project>
       <Name>JJ.Framework.Data.SqlClient</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Data\JJ.Framework.Data.csproj">
+    <ProjectReference Include="..\..\Framework\Data\JJ.Framework.Data.csproj">
       <Project>{7adeddce-6903-4a58-94f5-d0b39b21330f}</Project>
       <Name>JJ.Framework.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Presentation.JavaScript\JJ.Framework.Presentation.JavaScript.csproj">
+    <ProjectReference Include="..\..\Framework\Presentation.JavaScript\JJ.Framework.Presentation.JavaScript.csproj">
       <Project>{bd4cf454-be0b-490f-997d-665da7ebec96}</Project>
       <Name>JJ.Framework.Presentation.JavaScript</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Presentation.Mvc\JJ.Framework.Presentation.Mvc.csproj">
+    <ProjectReference Include="..\..\Framework\Presentation.Mvc\JJ.Framework.Presentation.Mvc.csproj">
       <Project>{fed3c829-d92a-4800-9462-a175ccac4c70}</Project>
       <Name>JJ.Framework.Presentation.Mvc</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Presentation\JJ.Framework.Presentation.csproj">
+    <ProjectReference Include="..\..\Framework\Presentation\JJ.Framework.Presentation.csproj">
       <Project>{79b0eac3-5159-4fc8-b3d8-53315b205444}</Project>
       <Name>JJ.Framework.Presentation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Reflection\JJ.Framework.Reflection.csproj">
+    <ProjectReference Include="..\..\Framework\Reflection\JJ.Framework.Reflection.csproj">
       <Project>{1a8e047c-7893-4918-b415-ce3928e815d8}</Project>
       <Name>JJ.Framework.Reflection</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Presentation.Resources\JJ.Framework.Presentation.Resources.csproj">
+    <ProjectReference Include="..\..\Framework\Presentation.Resources\JJ.Framework.Presentation.Resources.csproj">
       <Project>{40a53175-8048-4f2d-93ca-383074c0267e}</Project>
       <Name>JJ.Framework.Presentation.Resources</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Web\JJ.Framework.Web.csproj">
+    <ProjectReference Include="..\..\Framework\Web\JJ.Framework.Web.csproj">
       <Project>{164520aa-2db7-4405-9ae5-eb515527a33b}</Project>
       <Name>JJ.Framework.Web</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Data\JJ.Data.Canonical\JJ.Data.Canonical.csproj">
+    <ProjectReference Include="..\..\Data\Canonical\JJ.Data.Canonical.csproj">
       <Project>{08ea4a4e-d815-47ae-9277-da6672d36214}</Project>
       <Name>JJ.Data.Canonical</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Data\JJ.Data.QuestionAndAnswer.EntityFramework5\JJ.Data.QuestionAndAnswer.EntityFramework5.csproj">
+    <ProjectReference Include="..\..\Data\QuestionAndAnswer.EntityFramework5\JJ.Data.QuestionAndAnswer.EntityFramework5.csproj">
       <Project>{ffe345e3-1f70-40e8-bb12-9cb377ef7eb5}</Project>
       <Name>JJ.Data.QuestionAndAnswer.EntityFramework5</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Data\JJ.Data.QuestionAndAnswer.NHibernate\JJ.Data.QuestionAndAnswer.NHibernate.csproj">
+    <ProjectReference Include="..\..\Data\QuestionAndAnswer.NHibernate\JJ.Data.QuestionAndAnswer.NHibernate.csproj">
       <Project>{4507bfdd-1c21-4ba8-9486-4819d3b6afca}</Project>
       <Name>JJ.Data.QuestionAndAnswer.NHibernate</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Data\JJ.Data.QuestionAndAnswer.DefaultRepositories\JJ.Data.QuestionAndAnswer.DefaultRepositories.csproj">
+    <ProjectReference Include="..\..\Data\QuestionAndAnswer.DefaultRepositories\JJ.Data.QuestionAndAnswer.DefaultRepositories.csproj">
       <Project>{b1408e4f-4a1c-4cd6-b818-0ff37a40e2ff}</Project>
       <Name>JJ.Data.QuestionAndAnswer.DefaultRepositories</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Data\JJ.Data.QuestionAndAnswer.Sql\JJ.Data.QuestionAndAnswer.Sql.csproj">
+    <ProjectReference Include="..\..\Data\QuestionAndAnswer.Sql\JJ.Data.QuestionAndAnswer.Sql.csproj">
       <Project>{9cf32856-6431-4366-8dea-a6ca2f27b5c6}</Project>
       <Name>JJ.Data.QuestionAndAnswer.Sql</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Data\JJ.Data.QuestionAndAnswer\JJ.Data.QuestionAndAnswer.csproj">
+    <ProjectReference Include="..\..\Data\QuestionAndAnswer\JJ.Data.QuestionAndAnswer.csproj">
       <Project>{64e812dc-4b3e-4a20-a6ca-7ea319383c49}</Project>
       <Name>JJ.Data.QuestionAndAnswer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\JJ.Presentation.QuestionAndAnswer\JJ.Presentation.QuestionAndAnswer.csproj">
+    <ProjectReference Include="..\QuestionAndAnswer\JJ.Presentation.QuestionAndAnswer.csproj">
       <Project>{680c0600-e384-4f3d-9c2a-38ecc1fdb1cb}</Project>
       <Name>JJ.Presentation.QuestionAndAnswer</Name>
     </ProjectReference>

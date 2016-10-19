@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D91D777A-F46E-48B6-90E9-90931A3CCFFF}</ProjectGuid>
+    <ProjectGuid>{9CF32856-6431-4366-8DEA-A6CA2F27B5C6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JJ.Business.QuestionAndAnswer.Import</RootNamespace>
-    <AssemblyName>JJ.Business.QuestionAndAnswer.Import</AssemblyName>
+    <RootNamespace>JJ.Data.QuestionAndAnswer.Sql</RootNamespace>
+    <AssemblyName>JJ.Data.QuestionAndAnswer.Sql</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -36,54 +36,32 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoryDescriptionCorrectorBase.cs" />
-    <Compile Include="ConverterBase.cs" />
-    <Compile Include="IImporter.cs" />
-    <Compile Include="Importer.cs" />
-    <Compile Include="ISelector.cs" />
-    <Compile Include="LinkModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Question_GetPageOfIDs.sql" />
+    <Compile Include="QuestionAndAnswerSqlExecutor.cs" />
+    <Compile Include="SqlEnum.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Business\JJ.Framework.Business.csproj">
-      <Project>{f44d03e8-feec-40d4-b866-a87799185b4c}</Project>
-      <Name>JJ.Framework.Business</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Common\JJ.Framework.Common.csproj">
+    <EmbeddedResource Include="Question_TryGetRandomID.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\Common\JJ.Framework.Common.csproj">
       <Project>{44fd9133-5fe7-4824-bd35-27273706d127}</Project>
       <Name>JJ.Framework.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Data\JJ.Framework.Data.csproj">
-      <Project>{7adeddce-6903-4a58-94f5-d0b39b21330f}</Project>
-      <Name>JJ.Framework.Data</Name>
+    <ProjectReference Include="..\..\Framework\Data.SqlClient\JJ.Framework.Data.SqlClient.csproj">
+      <Project>{ceb85f8e-d429-4510-95a5-47cc3069d412}</Project>
+      <Name>JJ.Framework.Data.SqlClient</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Reflection\JJ.Framework.Reflection.csproj">
+    <ProjectReference Include="..\..\Framework\Reflection\JJ.Framework.Reflection.csproj">
       <Project>{1a8e047c-7893-4918-b415-ce3928e815d8}</Project>
       <Name>JJ.Framework.Reflection</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Framework\JJ.Framework.Validation\JJ.Framework.Validation.csproj">
-      <Project>{59ddc853-62af-4f86-a803-3d4dd491e978}</Project>
-      <Name>JJ.Framework.Validation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Data\JJ.Data.QuestionAndAnswer.DefaultRepositories\JJ.Data.QuestionAndAnswer.DefaultRepositories.csproj">
-      <Project>{b1408e4f-4a1c-4cd6-b818-0ff37a40e2ff}</Project>
-      <Name>JJ.Data.QuestionAndAnswer.DefaultRepositories</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Data\JJ.Data.QuestionAndAnswer\JJ.Data.QuestionAndAnswer.csproj">
-      <Project>{64e812dc-4b3e-4a20-a6ca-7ea319383c49}</Project>
-      <Name>JJ.Data.QuestionAndAnswer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\JJ.Business.QuestionAndAnswer\JJ.Business.QuestionAndAnswer.csproj">
-      <Project>{b473be3e-3dca-4418-bfa0-9ebf0e024350}</Project>
-      <Name>JJ.Business.QuestionAndAnswer</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Question_CountAll.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
