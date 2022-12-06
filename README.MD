@@ -18,13 +18,13 @@ JJ.QuestionAndAnswer
 
 *Question & Answer* is an app that might train knowledge about certain topics, by randomly asking questions about raw facts about the topic.
 
-The database is loaded with questions about Cascading Style Sheets (CSS) and some Dutch to Polish translations. Also some questions about Kentico.
+The database is loaded with questions about Cascading Style Sheets (CSS) and some Dutch to Polish translations. Also some questions about Kentico CMS.
 
 You could enter your own question and answers manually too.
 
 There is a utility that makes questions out of import files. In theory you could program your own import too, creating questions in bulk.
 
-It is a web app, but it isn't hosting anywhere. (Hosting costs money 😩). So it gets IT-technical setting it up, but in theory you could use the [latest release](https://github.com/jjvanzon/JJ.QuestionAndAnswer/releases/) for that or go and set up the [dev env](#-dev-env) instead.
+It is a web app, but it isn't hosting anywhere. (Hosting costs money 😩). So it gets IT-technical setting it up, but in theory you could use the [latest release](https://github.com/jjvanzon/JJ.QuestionAndAnswer/releases/) or go and set up the [dev env](#-dev-env) instead.
 
 🏛 Architecture
 ---------------
@@ -33,12 +33,16 @@ The patterns and practices closely match the following guidelines for structurin
 
 [JJ's Reference Architecture](https://github.com/jjvanzon/JJs-Reference-Architecture)
 
-- There is separation between data layer, business layer and presentation layer.
-- Data layer and presentation have a platform-independent part and a platform-specific part (MVC / NHibernate).
-- Patterns are user prety rigorously.
-- It's multi-lingual.
-- Application independent parts were mostly moved to the [JJ.Framework](https://github.com/jjvanzon/JJ.Framework) for reuse.
+There is separation between data layer, business layer and presentation layer.  
 
+Data layer and presentation have a platform-independent part and a platform-specific part (MVC / NHibernate).  
+
+Patterns are used quite rigorously.  
+
+It's multi-lingual.  
+
+Application independent parts were mostly moved to the  
+[JJ.Framework](https://github.com/jjvanzon/JJ.Framework) for reuse.
 
 ⚙ Dev Env
 -----------
@@ -51,7 +55,7 @@ Here you may find some pointers how to set up a developent environment to build 
 
 ### 📀 SQL Server
 
-- SQL Server may be needed too. You may download that elsewhere.
+- SQL Server may be needed too. You may download that elsewhere too.
 
 ### 💽 Database
 
