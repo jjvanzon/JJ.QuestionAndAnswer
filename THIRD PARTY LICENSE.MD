@@ -34,19 +34,20 @@ Notes
 
 > This version makes clear that the license is applicable to both software and text, by changing the name and substituting "work" for instances of "software and its documentation." It moves "notice of changes or modifications to the files" to the copyright notice, to make clear that the license is compatible with other liberal licenses.
 
------
+W3C Software and Document Short Notice
+--------------------------------------
 
 [This notice should be placed within redistributed or derivative software code or text when appropriate. This particular formulation became active on May 13, 2015, and edited for clarity 7 April, 2021, superseding the 2002 version.]
 
 ### "JJ.QuestionAndAnswer data derived from the CSS specification": [https://github.com/jjvanzon/JJ.QuestionAndAnswer](https://github.com/jjvanzon/JJ.QuestionAndAnswer)
 
-
-Copyright © 2013 - 2022 World Wide Web Consortium, (Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University, Beihang). All Rights Reserved. This work is distributed under the W3C® Software and Document License [1] in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+Copyright © 1994 - 2022 World Wide Web Consortium, (Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University, Beihang). All Rights Reserved. This work is distributed under the W3C® Software and Document License [1] in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 [1] [http://www.w3.org/Consortium/Legal/copyright-software](http://www.w3.org/Consortium/Legal/copyright-software)
 
------
+Notice of Changes and Modifications
+------------------------------------
 
-This software or document includes material copied from or derived from CSS SPEC­I­FI­CA­TIONS [https://www.w3.org/Style/CSS/specs.en.html](https://www.w3.org/Style/CSS/specs.en.html). Copyright © 1994 - 2012 W3C® (MIT, ERCIM, Keio, Beihang).
+This software or document includes material copied from or derived from CSS SPEC­I­FI­CA­TIONS [https://www.w3.org/Style/CSS/specs.en.html](https://www.w3.org/Style/CSS/specs.en.html). Copyright © 1994 - 2022 W3C® (MIT, ERCIM, Keio, Beihang).
 
 Data from the documents from the CSS specification, from the W3C site, were extracted, then converted to question and answer form into the JJ.QuestionAndAnswer database.
