@@ -38,8 +38,8 @@ Notes
 
 [This notice should be placed within redistributed or derivative software code or text when appropriate. This particular formulation became active on May 13, 2015, and edited for clarity 7 April, 2021, superseding the 2002 version.]
 
-"JJ.QuestionAndAnswer data derived from the CSS specification": [https://github.com/jjvanzon/JJ.QuestionAndAnswer](https://github.com/jjvanzon/JJ.QuestionAndAnswer)
-================================================================================================================
+### "JJ.QuestionAndAnswer data derived from the CSS specification": [https://github.com/jjvanzon/JJ.QuestionAndAnswer](https://github.com/jjvanzon/JJ.QuestionAndAnswer)
+
 
 Copyright © 2013 - 2022 World Wide Web Consortium, (Massachusetts Institute of Technology, European Research Consortium for Informatics and Mathematics, Keio University, Beihang). All Rights Reserved. This work is distributed under the W3C® Software and Document License [1] in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
