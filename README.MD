@@ -1,33 +1,51 @@
-JJ Code Base
-============
+JJ.QuestionAndAnswer
+====================
 
-Larger code base with multiple applications:
+<h2>📔 Contents</h2>
 
-- Question & Answer
-- Some misc demos
+- [👋 Introduction](#-introduction)
+- [🏛 Architecture](#-architecture)
+- [⚙ Dev Env](#-dev-env)
+    - [👨‍💻 Visual Studio](#-visual-studio)
+    - [📀 SQL Server](#-sql-server)
+    - [💽 Database](#-database)
+    - [📦 JJ.Framework](#-jjframework)
+    - [📡 Internet Information Services (IIS)](#-internet-information-services-iis)
+- [🕘 Checking Out Old Commits](#-checking-out-old-commits)
 
-The following projects used to be in there, but were moved to the Archive folder, because they have their own separate repositories now:
+👋 Introduction
+------------
 
-- [JJ.Framework](https://github.com/jjvanzon/JJ.Framework)
-- [JJ.Synthesizer](https://github.com/jjvanzon/JJ.Synthesizer)
-- [JJ.SaveText](https://github.com/jjvanzon/JJ.SaveText)
+Question & Answer is an app that might train knowledge about certain topics, by randomly asking questions about raw facts about the topic.
 
-Modularization
---------------
+🏛 Architecture
+---------------
 
-Circle3 was the previous code base, that started being developed around 2010. It was about a quite specific way of programming, not like mainstream .NET development. It had a first-order grouping by functionality.
+The patterns and practices closely match the following guidelines for structuring software:
 
-The way of working was not portable between what I did at home and what I did at the office. My ideas about software architecture have changed.
+[JJ's Reference Architecture](https://github.com/jjvanzon/JJs-Reference-Architecture)
 
-JJ code base is newer. It started being developed around 2013. Its architecture is more agnostic about specific data models, specific programming models, specific API's and specific functionality. The first order grouping is now by technical aspects such as apps, services, framework, validation, security, etcetera. The idea is that that software architecture might accommodate different types of programming and different types of functionality in an orderly fashion.
+⚙ Dev Env
+-----------
 
-I think a first-order grouping by technical aspects instead of by functional aspects may be of help, because technology can change fast, but functionality may change even faster, so for a main outline of things, technical aspects might be more stable as a subdivision, than functional aspects, which may change more frequently, in my opinion.
+Here you may find some pointers how to set up a developent environment to build and run `JJ.QuestionAndAnswer` projects.
 
+### 👨‍💻 Visual Studio
 
-Setting Up Dev Environment
-----------------------
+- Visual Studio Community 2019 or 2022 may be needed to open the projects and solution file, which can be downloaded for free elsewhere.
 
-### JJ.Framework
+### 📀 SQL Server
+
+- SQL Server may be needed too. You may download that elsewhere.
+
+### 💽 Database
+
+- The database backup can be found under "Database\QuestionAndAnswer"
+- The file can be unzipped and restored in SQL Server with name DEV_QuestionAndAnswerDB
+- And again with name DEV_QuestionAndAnswerDB_UnitTests
+- The database user name "dev" could be expected with password "dev".
+
+### 📦 JJ.Framework
 
 - Pre-release versions of *JJ.Framework* components could be used.
 - They may require configuring *NuGet* to connect to an additional package source.
@@ -35,16 +53,22 @@ Setting Up Dev Environment
 - Name: JJs-Pre-Release-Package-Feed
 - Source: https://pkgs.dev.azure.com/jjvanzon/1de16010-421a-41a5-90f1-86e9513f2c5b/_packaging/JJs-Pre-Release-Package-Feed/nuget/v3/index.json
 
-### Internet Information Services (IIS)
+### 📡 Internet Information Services (IIS)
 
-- Some web projects might like to run on IIS (Internet Information Services).
-- Otherwise they may not load.
+- The web project `JJ.Presentation.QuestionAndAnswer.Mvc` might like to run on IIS (Internet Information Services).
+- Otherwise it may not load in Visual Studio.
 - Try to *reload* a web project:
 - The Output window in Visual Studio might show an expected web address.
+
+<hr />
+
 - It is suggested to install IIS.
 - Create a web site.
-- Point its *physical path* to the folder of the csproj that might not load.
+- Point its *physical path* to the folder of the csproj that might not have loaded.
 - Having a *binding* that uses the web address previously found in the Visual Studio output as a *host name*.
+
+<hr />
+
 - The file `C:\Windows\System32\drivers\etc\hosts` may need editing.
 - Entries like the following might be added:
 
@@ -53,11 +77,20 @@ Setting Up Dev Environment
 ::1        dev.questionandanswer.jjvanzon.io
 ```
 
-### Databases
+🕘 Checking Out Old Commits
+----------------------------
 
-#### QuestionAndAnswerDB
+`JJ.QuestionAndAnswer` was once part of a larger code base. It was extracted to become a new git repository with history in tact. Some quirks when checking out older history items, may have to do with that. The following may only be relevant when getting older commits from history (before December 2022).
 
-- The database backup can be found under "Database\QuestionAndAnswer"
-- The file can be unzipped and restored in SQL Server with name DEV_QuestionAndAnswerDB
-- And again with name DEV_QuestionAndAnswerDB_UnitTests
-- The database user name "dev" could be expected with password "dev".
+- Commit messages:
+    - Descriptions may mention projects not part of the `JJ.SaveText` repo.
+- Empty merge commits:
+    - Some merge commits without any files associated with it might be found here and there.
+- Broken references to `JJ.Framework`:
+    - `JJ.Framework` projects are no longer in the same code base.
+    - In some cases it may help to clone the [JJ.Framework repository](https://github.com/jjvanzon/JJ.Framework) and put the `JJ.Framework` folder right next to the `JJ.QuestionAndAnswer` folder. This may fix the broken links.
+    - But sometimes the paths are still incorrect and may need to be corrected.
+    - This would give you the option to use a specific commit from JJ.Framework's history.
+    - Another option may be to try referencing the NuGet version of these depedencies.
+- References to other non-existent projects:
+    - To fix this, try referencing the NuGet version of these depedencies.
