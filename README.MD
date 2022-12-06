@@ -3,7 +3,7 @@ JJ.QuestionAndAnswer
 
 <h2>📔 Contents</h2>
 
-- [👋 Introduction](#-introduction)
+- [👋 Intro](#-intro)
 - [🏛 Architecture](#-architecture)
 - [⚙ Dev Env](#-dev-env)
     - [👨‍💻 Visual Studio](#-visual-studio)
@@ -13,10 +13,18 @@ JJ.QuestionAndAnswer
     - [📡 Internet Information Services (IIS)](#-internet-information-services-iis)
 - [🕘 Checking Out Old Commits](#-checking-out-old-commits)
 
-👋 Introduction
-------------
+👋 Intro
+--------
 
-Question & Answer is an app that might train knowledge about certain topics, by randomly asking questions about raw facts about the topic.
+*Question & Answer* is an app that might train knowledge about certain topics, by randomly asking questions about raw facts about the topic.
+
+The database is loaded with questions about Cascading Style Sheets (CSS) and some Dutch to Polish translations. Also some questions about Kentico.
+
+You could enter your own question and answers manually too.
+
+There is a utility that makes questions out of import files. In theory you could program your own import too, creating questions in bulk.
+
+It is a web app, but it isn't hosting anywhere. (Hosting is expensive 😩). So it gets IT-technical setting it up, but in theory you could using the [latest release](https://github.com/jjvanzon/JJ.QuestionAndAnswer/releases/) for that or go and set up the [dev env](#-dev-env) instead.
 
 🏛 Architecture
 ---------------
@@ -24,6 +32,9 @@ Question & Answer is an app that might train knowledge about certain topics, by 
 The patterns and practices closely match the following guidelines for structuring software:
 
 [JJ's Reference Architecture](https://github.com/jjvanzon/JJs-Reference-Architecture)
+
+
+
 
 ⚙ Dev Env
 -----------
@@ -83,14 +94,14 @@ Here you may find some pointers how to set up a developent environment to build 
 `JJ.QuestionAndAnswer` was once part of a larger code base. It was extracted to become a new git repository with history in tact. Some quirks when checking out older history items, may have to do with that. The following may only be relevant when getting older commits from history (before December 2022).
 
 - Commit messages:
-    - Descriptions may mention projects not part of the `JJ.SaveText` repo.
+    - Descriptions may mention projects not part of this repo.
 - Empty merge commits:
     - Some merge commits without any files associated with it might be found here and there.
 - Broken references to `JJ.Framework`:
     - `JJ.Framework` projects are no longer in the same code base.
     - In some cases it may help to clone the [JJ.Framework repository](https://github.com/jjvanzon/JJ.Framework) and put the `JJ.Framework` folder right next to the `JJ.QuestionAndAnswer` folder. This may fix the broken links.
     - But sometimes the paths are still incorrect and may need to be corrected.
-    - This would give you the option to use a specific commit from JJ.Framework's history.
+    - You could then use a specific commit from JJ.Framework's history.
     - Another option may be to try referencing the NuGet version of these depedencies.
 - References to other non-existent projects:
     - To fix this, try referencing the NuGet version of these depedencies.
