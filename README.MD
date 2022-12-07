@@ -41,7 +41,7 @@ You could enter your own question and answers manually too.
 
 There is a utility that makes questions out of import files. In theory you could program your own import too, creating questions in bulk.
 
-It is a web app, but it isn't hosting anywhere. Hosting costs money 😩. So it gets IT-technical setting it up, but in theory you could use the [latest release](https://github.com/jjvanzon/JJ.QuestionAndAnswer/releases/) or go and set up the [dev env](#-dev-env) instead.
+It is a web app, but it isn't hosted anywhere. Hosting costs money 😩. So it gets IT-technical setting it up, but in theory you could use the [latest release](https://github.com/jjvanzon/JJ.QuestionAndAnswer/releases/) or go and set up the [dev env](#-dev-env) instead.
 
 It was also definitely also a playground for trying out technologies and ideas about frameworks good and bad.
 
