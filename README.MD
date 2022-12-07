@@ -19,8 +19,6 @@
 
 ![](Resources/screen-shot-random-question.png)
 
-![](Resources/screen-shot-answer.png)
-
 ![](Resources/screen-shot-multi-language.png)
 
 ![](Resources/screen-shot-category-selection.png)
