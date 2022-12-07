@@ -29,8 +29,6 @@
 
 ![](Resources/screen-shot-question-edit-1.png)
 
-![](Resources/screen-shot-question-edit-2.png)
-
 👋 Intro
 --------
 
