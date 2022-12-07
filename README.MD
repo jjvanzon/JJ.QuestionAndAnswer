@@ -33,7 +33,7 @@
 👋 Intro
 --------
 
-*Question & Answer* is an app that might train knowledge about certain topics, by randomly asking questions about raw facts about the topic.
+*Question & Answer* is an app that might train knowledge about certain topics, by randomly asking questions about raw facts about the matter.
 
 The database is loaded with questions about Cascading Style Sheets (CSS) and some Dutch to Polish translations. Also a few questions about Kentico CMS.
 
