@@ -5,6 +5,7 @@
 
 - [🖼 Screen Shots](#-screen-shots)
 - [👋 Intro](#-intro)
+- [⚠ WARNING: Weak Password Security ❗](#-warning-weak-password-security-)
 - [🏛 Architecture](#-architecture)
 - [⚙ Dev Env](#-dev-env)
     - [👨‍💻 Visual Studio](#-visual-studio)
@@ -43,6 +44,14 @@ There is a utility that makes questions out of import files. In theory you could
 It is a web app, but it isn't hosting anywhere. Hosting costs money 😩. So it gets IT-technical setting it up, but in theory you could use the [latest release](https://github.com/jjvanzon/JJ.QuestionAndAnswer/releases/) or go and set up the [dev env](#-dev-env) instead.
 
 It was also definitely also a playground for trying out technologies and ideas about frameworks good and bad.
+
+⚠ WARNING: Weak Password Security ❗
+------------------------------------
+
+__WARNING:__ Passwords in database are not encrypted (stored as plain-text). So better not use passwords that would also protect your valuables. Here are the user names  passwords currently in the database:
+
+    admin	enteentest0!
+    devjj79	enteentest0!
 
 🏛 Architecture
 ---------------
