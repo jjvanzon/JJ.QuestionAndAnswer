@@ -27,7 +27,7 @@
 
 ![](Resources/screen-shot-question-detail.png)
 
-![](Resources/screen-shot-question-edit-1.png)
+![](Resources/screen-shot-question-edit.png)
 
 👋 Intro
 --------
