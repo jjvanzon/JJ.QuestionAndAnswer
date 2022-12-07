@@ -48,7 +48,7 @@ It was also definitely also a playground for trying out technologies and ideas a
 ⚠ WARNING: Weak Password Security ❗
 ------------------------------------
 
-__WARNING:__ Passwords in database are not encrypted (stored as plain-text). So better not use passwords that would also protect your valuables. Here are the user names  passwords currently in the database:
+__WARNING:__ Passwords in database are not encrypted (stored as plain-text). So better not use passwords that would also protect your valuables. Here are the user names and passwords currently in the database:
 
     admin	enteentest0!
     devjj79	enteentest0!
@@ -101,12 +101,13 @@ Here you may find some pointers how to set up a developent environment to build 
 
 - The web project `JJ.Presentation.QuestionAndAnswer.Mvc` might like to run on IIS (Internet Information Services).
 - Otherwise it may not load in Visual Studio.
-- Try to *reload* a web project:
+- Try to *reload* the web project:
 - The Output window in Visual Studio might show an expected web address.
 
 <hr />
 
 - It is suggested to install IIS.
+- It may be installed by activating it as a *Windows component* on some operating systems.
 - Create a web site.
 - Point its *physical path* to the folder of the csproj that might not have loaded.
 - Having a *binding* that uses the web address previously found in the Visual Studio output as a *host name*.
