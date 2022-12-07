@@ -51,6 +51,7 @@ The patterns and practices closely match the following guidelines for structurin
 
 [JJ's Reference Architecture](https://github.com/jjvanzon/JJs-Reference-Architecture)
 
+It's model driver, loosely coupled.  
 There is separation between data layer, business layer and presentation layer.  
 Data layer and presentation have a platform-independent part and a platform-specific part.  
 Patterns are used quite rigorously.  
