@@ -7,8 +7,8 @@ JJ.QuestionAndAnswer
 - [🏛 Architecture](#-architecture)
 - [⚙ Dev Env](#-dev-env)
     - [👨‍💻 Visual Studio](#-visual-studio)
-    - [📀 SQL Server](#-sql-server)
-    - [💽 Database](#-database)
+    - [🗄 SQL Server](#-sql-server)
+    - [📀 Database](#-database)
     - [📦 JJ.Framework](#-jjframework)
     - [📡 Internet Information Services (IIS)](#-internet-information-services-iis)
 - [🕘 Checking Out Old Commits](#-checking-out-old-commits)
@@ -25,6 +25,8 @@ You could enter your own question and answers manually too.
 There is a utility that makes questions out of import files. In theory you could program your own import too, creating questions in bulk.
 
 It is a web app, but it isn't hosting anywhere. (Hosting costs money 😩). So it gets IT-technical setting it up, but in theory you could use the [latest release](https://github.com/jjvanzon/JJ.QuestionAndAnswer/releases/) or go and set up the [dev env](#-dev-env) instead.
+
+It was definitely also a playground for trying out technologies and ideas about frameworks good and bad.
 
 🏛 Architecture
 ---------------
@@ -53,11 +55,11 @@ Here you may find some pointers how to set up a developent environment to build 
 
 - Visual Studio Community 2019 or 2022 may be needed to open the projects and solution file, which can be downloaded for free elsewhere.
 
-### 📀 SQL Server
+### 🗄 SQL Server
 
 - SQL Server may be needed too. You may download that elsewhere too.
 
-### 💽 Database
+### 📀 Database
 
 - The database backup can be found under "Database\QuestionAndAnswer"
 - The file can be unzipped and restored in SQL Server with name DEV_QuestionAndAnswerDB
