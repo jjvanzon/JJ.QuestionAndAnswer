@@ -3,6 +3,7 @@ JJ.QuestionAndAnswer
 
 <h2>📔 Contents</h2>
 
+- [🖼 Screen Shots](#-screen-shots)
 - [👋 Intro](#-intro)
 - [🏛 Architecture](#-architecture)
 - [⚙ Dev Env](#-dev-env)
@@ -12,6 +13,25 @@ JJ.QuestionAndAnswer
     - [📦 JJ.Framework](#-jjframework)
     - [📡 Internet Information Services (IIS)](#-internet-information-services-iis)
 - [🕘 Checking Out Old Commits](#-checking-out-old-commits)
+
+🖼 Screen Shots
+---------------
+
+![](Resources/screen-shot-random-question.png)
+
+![](Resources/screen-shot-answer.png)
+
+![](Resources/screen-shot-multi-language.png)
+
+![](Resources/screen-shot-category-selection.png)
+
+![](Resources/screen-shot-question-list.png)
+
+![](Resources/screen-shot-question-detail.png)
+
+![](Resources/screen-shot-question-edit-1.png)
+
+![](Resources/screen-shot-question-edit-2.png)
 
 👋 Intro
 --------
