@@ -54,9 +54,7 @@ __WARNING:__ Passwords in database are not encrypted (stored as plain-text). So 
 🏛 Architecture
 ---------------
 
-It was definitely also a playground for trying out technologies and ideas about frameworks good and bad.
-
-The patterns and practices closely match the following guidelines for structuring software:
+It was definitely also a playground for trying out technologies and ideas about frameworks good and bad. The patterns and practices closely match the following guidelines for structuring software:
 
 [JJ's Reference Architecture](https://github.com/jjvanzon/JJs-Reference-Architecture)
 
