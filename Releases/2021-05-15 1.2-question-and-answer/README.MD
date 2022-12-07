@@ -3,6 +3,19 @@ Question & Answer Release 1.2
 
 *2021-05-15*
 
+<h2>Contents</h2>
+
+- [Introduction](#introduction)
+- [Changes](#changes)
+- [Warning: Weak Password Security](#warning-weak-password-security)
+- [Prerequisites](#prerequisites)
+- [Database](#database)
+- [Web Site Files](#web-site-files)
+- [Import Tool](#import-tool)
+    - [General Installation Steps](#general-installation-steps)
+    - [Description of Import Tool](#description-of-import-tool)
+    - [Imperfections](#imperfections)
+- [IO Files](#io-files)
 
 Introduction
 ------------
@@ -19,6 +32,15 @@ Changes
 - Tried to removed excessive "-->" from (Prod) config.
 - Tried to show message box upon exception.
 - Tried giving it a more esthetic window title.
+
+
+Warning: Weak Password Security
+-------------------------------
+
+Passwords in database are not encrypted (stored as plain-text). So better not use passwords that would also protect your valuables. Here are the user names and passwords currently available:
+
+    admin	enteentest0!
+    devjj79	enteentest0!
 
 
 Prerequisites
