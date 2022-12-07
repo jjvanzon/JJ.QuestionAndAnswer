@@ -55,7 +55,7 @@ There is separation between data layer, business layer and presentation layer.
 Data layer and presentation have a platform-independent part and a platform-specific part.  
 Patterns are used quite rigorously.  
 It's multi-lingual.  
-Application-independent parts were mostly added for reuse to the:
+Application-independent parts were mostly added to the:
 
 [JJ.Framework](https://github.com/jjvanzon/JJ.Framework)
 
