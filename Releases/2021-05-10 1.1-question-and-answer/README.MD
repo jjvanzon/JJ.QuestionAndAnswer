@@ -10,6 +10,15 @@ Changes
 The Import Tool was added, which may now be fixed not to crash for import source W3CSpecCss21_UserInterface_LooseDefinitions. Then an attempt was made to add that import to the accompanying database. Installation instructions might be found in the README as wel a description of some imperfections of the import tool.
 
 
+Warning: Weak Password Security
+-------------------------------
+
+Passwords in database are not encrypted (stored as plain-text). So better not use passwords that would also protect your valuables. Here are the user names and passwords currently available:
+
+    admin	enteentest0!
+    devjj79	enteentest0!
+
+
 Prerequisites
 -------------
 

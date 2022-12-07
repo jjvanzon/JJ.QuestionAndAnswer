@@ -4,6 +4,15 @@ QuestionAndAnswer Release 1.0
 *2021-05-09*
 
 
+Warning: Weak Password Security
+-------------------------------
+
+Passwords in database are not encrypted (stored as plain-text). So better not use passwords that would also protect your valuables. Here are the user names and passwords currently available:
+
+    admin	enteentest0!
+    devjj79	enteentest0!
+
+
 Prerequisites
 -------------
 
