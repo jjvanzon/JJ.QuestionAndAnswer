@@ -134,6 +134,6 @@ Here you may find some pointers how to set up a developent environment to build 
     - In some cases it may help to clone the [JJ.Framework repository](https://github.com/jjvanzon/JJ.Framework) and put the `JJ.Framework` folder right next to the `JJ.QuestionAndAnswer` folder. This may fix the broken links.
     - But sometimes the paths are still incorrect and may need to be corrected.
     - You could then use a specific commit from JJ.Framework's history.
-    - Another option may be to try referencing the NuGet version of these depedencies.
+    - Another option may be to try referencing the NuGet version of these dependencies.
 - References to other non-existent projects:
-    - To fix this, try referencing the NuGet version of these depedencies.
+    - To fix this, try referencing the NuGet version of these dependencies.
