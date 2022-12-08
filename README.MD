@@ -89,7 +89,7 @@ Here you may find some pointers how to set up a developent environment to build 
 
 ### 📦 JJ.Framework
 
-- Pre-release versions of *JJ.Framework* components could be used.
+- Pre-release versions of `JJ.Framework` components could be used.
 - They may require configuring *NuGet* to connect to an additional package source.
 - The following info might be useful for that:
 - Name: JJs-Pre-Release-Package-Feed
