@@ -134,7 +134,7 @@ Here you may find some pointers how to set up a developent environment to build 
     - Descriptions may mention projects not part of this repo.
 - Empty merge commits:
     - Some merge commits without any files associated with it might be found here and there.
-- Broken references to `JJ.Framework` or `JJ.Canonical`:
+- Broken references to `JJ.Framework` / `JJ.Canonical`:
     - `JJ.Framework` / `JJ.Canonical` projects are no longer in the same code base.
     - In some cases it may help to clone the [JJ.Framework](https://github.com/jjvanzon/JJ.Framework) repository and put the `JJ.Framework` folder right next to the `JJ.QuestionAndAnswer` folder. This may fix the broken links.
     - Same for the [JJ.Canonical](https://github.com/jjvanzon/JJ.Canonical) repository.
