@@ -128,7 +128,7 @@ Here you may find some pointers how to set up a developent environment to build 
 🕘 Checking Out Old Commits
 ----------------------------
 
-`JJ.QuestionAndAnswer` was once part of a larger code base. It was extracted to become a new git repository with history in tact. Some quirks when checking out older history items, may have to do with that. The following may only be relevant when getting older commits from history (before December 2022).
+`JJ.QuestionAndAnswer` was once part of a larger code base. It was extracted to become a new git repository with history in tact. Some quirks when checking out older history items, may have to do with that. The following may only be relevant when getting older commits (from before December 2022).
 
 - Commit messages:
     - Descriptions may mention projects not part of this repo.
@@ -138,7 +138,8 @@ Here you may find some pointers how to set up a developent environment to build 
     - To fix this, try referencing the NuGet version of these dependencies.
 - Broken project references to `JJ.Framework` / `JJ.Canonical`:
     - `JJ.Framework` / `JJ.Canonical` projects are no longer in the same code base.
-    - You could try referencing the NuGet version of these dependencies, but another solution may be to clone the [JJ.Framework](https://github.com/jjvanzon/JJ.Framework) repository and put the `JJ.Framework` folder right next to the `JJ.QuestionAndAnswer` folder. This may fix the broken links.
+    - You could try referencing the NuGet version of these dependencies.
+    - But another solution may be to clone the [JJ.Framework](https://github.com/jjvanzon/JJ.Framework) repository and put the `JJ.Framework` folder right next to the `JJ.QuestionAndAnswer` folder. This may fix the broken links.
     - Same for the [JJ.Canonical](https://github.com/jjvanzon/JJ.Canonical) repository.
     - But sometimes the paths are still incorrect and may need to be modified (with Notepad)?
     - But then you could use a specific commit from `JJ.Framework` or `JJ.Canonical`'s history.
